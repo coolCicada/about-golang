@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// 定义
@@ -15,8 +17,8 @@ func main() {
 	fmt.Printf("type %T value %v", name, name) */
 
 	// 数字常量
-	const a = 5
-	var f float64 = a
-	fmt.Printf("type %T \n", a)
-	fmt.Println("value:", f, "---")
+	/* const a = 5
+	var int32Vat int32 = a
+	var float64Var float64 = a;
+	fmt.Printf("%d %T %T %T", a, a, int32Vat, float64Var) */
 }
