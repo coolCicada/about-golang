@@ -19,7 +19,7 @@ func init() {
 	}
 }
 
-func main() {
+func main_main() {
 	fmt.Println("Geometrical shape properties")
 	fmt.Println(rectangle.Area(rectLen, rectWidth))
 	fmt.Println(rectangle.Diagonal(rectLen, rectWidth))
