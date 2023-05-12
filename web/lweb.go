@@ -24,12 +24,14 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 
 func login(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("method:", r.Method)
+	r.ParseForm()
 	if r.Method == "GET" {
 		t, _ := template.ParseFiles("login.html")
 		t.Execute(w, nil)
 	} else {
 		fmt.Println("username:", r.Form["username"])
 		fmt.Println("password:", r.Form["password"])
+		fmt.Fprintf(w, strings.Join(append(r.Form["username"], r.Form["password"]...), "-"));
 	}
 }
 
