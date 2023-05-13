@@ -6,8 +6,14 @@
 
 ## algorithm
 
+    算法相关
+
 ## basic
+
+    基础知识
 
 ## goByExample
 
 ## web
+
+    web开发
