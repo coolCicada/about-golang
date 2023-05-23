@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	s := "12345"	
@@ -11,5 +14,8 @@ func main() {
 	fmt.Println(s, num, num2, str)
 	t := 1 + '1'
 	fmt.Println(t)
-	fmt.Printf("%T, %T, %T, %T, %T", s, num, num2, str, t)
+	fmt.Printf("%T, %T, %T, %T, %T \n", s, num, num2, str, t)
+	fmt.Println(s, num, num2, str, t)
+	fmt.Println(strconv.Atoi(s))
+	fmt.Println(strconv.Itoa(123))
 }
