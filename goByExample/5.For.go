@@ -6,7 +6,7 @@ func main() {
 	i := 1
 	for i <= 3 {
 		fmt.Println(i)
-		i = i + 1
+		i ++
 	}
 
 	for j := 7; j <= 9; j ++ {
@@ -14,8 +14,8 @@ func main() {
 	}
 
 	for {
-		fmt.Println("loop");
-		break;
+		fmt.Println("loop")
+		break
 	}
 
 	for n := 0; n <= 5; n ++ {

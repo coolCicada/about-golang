@@ -7,7 +7,7 @@ import (
 
 func main() {
 	i := 2
-	fmt.Print("write ", i, " as ")
+	fmt.Print("Write ", i, " as ")
 	switch i {
 	case 1:
 		fmt.Println("one")
@@ -19,27 +19,27 @@ func main() {
 
 	switch time.Now().Weekday() {
 	case time.Saturday, time.Sunday:
-		fmt.Println("It's the weekend")
+		fmt.Println("it's the weekend")
 	default:
-		fmt.Println("It's a weekday")
+		fmt.Println("it's a weekday")
 	}
 
 	t := time.Now()
 	switch {
 	case t.Hour() < 12:
-		fmt.Println("It's before noon")
+		fmt.Println("< 12")
 	default:
-		fmt.Println("It's after noon")
+		fmt.Println(">= 12")
 	}
 
-	whatAmI := func(i interface{}) {
+	whatAmI := func (i interface{})  {
 		switch t := i.(type) {
 		case bool:
-			fmt.Println("i'm a bool")
+			fmt.Println("bool")
 		case int:
-			fmt.Println("i'm an int")
+			fmt.Println("int")
 		default:
-			fmt.Printf("Don't konw type %T\n", t)
+			fmt.Printf("don't know type %T\n", t)
 		}
 	}
 

@@ -12,7 +12,7 @@ func intSeq() func() int {
 
 func main() {
 	nextInt := intSeq()
-	
+
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())

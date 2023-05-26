@@ -12,18 +12,18 @@ func main() {
 
 	v1 := m["k1"]
 	fmt.Println("v1:", v1)
+
+	fmt.Println(m["k3"])
+	fmt.Println(m["k3"] == 0)
+
 	fmt.Println("len:", len(m))
 
 	delete(m, "k2")
 	fmt.Println("map:", m)
 
-	_, prs := m["k2"]
-	fmt.Println("prs:", prs)
+	_, has := m["k2"]
+	fmt.Println("has:", has)
 
-	m["k3"] = 0
-
-	fmt.Println(m["k2"], m["k3"])
-
-	n := map[string]int{"foo": 1, "bar": 2}
+	n := map[string]int{ "foo": 1, "bar": 2 }
 	fmt.Println("map:", n)
 }
