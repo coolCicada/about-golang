@@ -14,7 +14,7 @@ func newPerson(name string) *person {
 }
 
 func main() {
-	fmt.Println(person{"Bob", 20})	
+	fmt.Println(person{"Bob", 20})
 
 	fmt.Println(person{name: "Alice", age: 30})
 
@@ -24,7 +24,7 @@ func main() {
 
 	fmt.Println(newPerson("Jon"))
 
-	s := person{name: "sean", age: 50}
+	s := person{name: "Sean", age: 50}
 	fmt.Println(s.name)
 
 	sp := &s
