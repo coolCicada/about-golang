@@ -13,17 +13,19 @@ func (b base) describe() string {
 type container struct {
 	base
 	str string
+	num int
 }
 
 func main() {
-	co := container {
-		base: base{num: 1},
+	co := container{
+		base: base{
+			num: 1,
+		},
 		str: "some name",
+		num: 2,
 	}	
 
-	fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
-
-	fmt.Println("also num:", co.base.num)
+	fmt.Printf("co = {num: %v, str: %v}\n", co.base.num, co.str)
 
 	fmt.Println("describe:", co.describe())
 
