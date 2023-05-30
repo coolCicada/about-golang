@@ -1,6 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+var (
+	r  = bufio.NewReader(os.Stdin)
+	w  = bufio.NewWriter(os.Stdout)
+)
 
 const L int64 = 2e5
 
@@ -9,18 +18,23 @@ type pp struct {
 }
 
 func main() {
+	solve()
+	w.Flush()
+}
+
+func solve() {
 	var n, m, h, k int64
-	fmt.Scan(&n, &m, &h, &k)
+	fmt.Fscan(r, &n, &m, &h, &k)
 
 	var s string
-	fmt.Scan(&s)
+	fmt.Fscan(r, &s)
 
 	mp := map[pp]bool{}
 
 	for m > 0 {
 		m --
 		var x, y int64
-		fmt.Scan(&x, &y)
+		fmt.Fscan(r, &x, &y)
 		mp[pp{x, y}] = true
 	}
 
@@ -28,7 +42,7 @@ func main() {
 
 	for _, v := range s {
 		if h == 0 {
-			fmt.Println("No")
+			fmt.Fprintln(w, "No")
 			return
 		}
 
@@ -51,5 +65,5 @@ func main() {
 		}
 	}
 
-	fmt.Println("Yes")
+	fmt.Fprintln(w, "Yes")
 }

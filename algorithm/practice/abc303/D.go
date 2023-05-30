@@ -1,15 +1,22 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+)
+
+var (
+	r  = bufio.NewReader(os.Stdin)
+	w  = bufio.NewWriter(os.Stdout)
 )
 
 func main() {
 	var x, y, z int64
-	fmt.Scan(&x, &y, &z)
+	fmt.Fscan(r, &x, &y, &z)
 
 	var s string
-	fmt.Scan(&s)
+	fmt.Fscan(r, &s)
 
 	a := make([][]int64, len(s) + 1)
 	for i := 0; i <= len(s); i ++ {
@@ -29,8 +36,8 @@ func main() {
 			a[i][1] = min(a[i - 1][1] + x, a[i - 1][0] + x + z)
 		}
 	}
-
-	fmt.Println(min(a[len(s)][0], a[len(s)][1]))
+	fmt.Fprintln(w, min(a[len(s)][0], a[len(s)][1]))
+	w.Flush()
 }
 
 func min(a ...int64) int64 {
