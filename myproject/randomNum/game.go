@@ -1,4 +1,4 @@
-package main
+package randomNum
 
 import (
 	"bufio"
@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func main() {
+func Solve() {
 	maxNum := 100
 	rand.Seed(time.Now().UnixNano())
 	secretNumber := rand.Intn(maxNum)
