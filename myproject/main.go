@@ -7,5 +7,5 @@ import (
 
 func main() {
 	// randomNum.Solve()
-	dict.Solve()
+	dict.Query("good")
 }
