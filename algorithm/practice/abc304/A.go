@@ -11,29 +11,22 @@ var (
 	w  = bufio.NewWriter(os.Stdout)
 )
 
-type pii struct {
-	name string
-	age int
-}
 func main() {
-	var n int
+	var n int = 0
+	mn := int(1e9 + 1)
 	fmt.Fscan(r, &n)
-	a := make([]pii, n)
+	sarr, aarr := make([]string, n), make([]int, n)
+	index := 0
 	for i := 0; i < n; i ++ {
-		fmt.Fscan(r, &a[i].name, &a[i].age)
-	}
-	mn := 0
-	mage := a[0].age
-	for i := 0; i < n; i ++ {
-		if a[i].age < mage {
-			mage = a[i].age
-			mn = i
+		fmt.Fscan(r, &sarr[i], &aarr[i])
+		if aarr[i] < mn {
+			mn = aarr[i]
+			index = i
 		}
 	}
+
 	for i := 0; i < n; i ++ {
-		fmt.Fprintln(w, a[(i + mn) % n].name)
+		fmt.Fprintln(w, sarr[(index + i) % n])
 	}
 	w.Flush()
 }
-
-func fmtT() { fmt.Println("over") }
